@@ -1,7 +1,7 @@
 $(document).ready(function(){
   window.dancers = [];
 
-  $(".addDancerButton").on("click", function(event){
+  $(".addBlinkyDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -27,6 +27,41 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    $('body').append(dancer.$node);
+  });
+
+  $(".addWBDancerButton").on("click", function(event){
+    
+    var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+
+    // get the maker function for the kind of dancer we're supposed to make
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    // make a dancer with a random position
+
+    var dancer = dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append('<div><img src="http://static.tumblr.com/f20418d4dac3303f5653efc4a178f44a/bvidegz/m3wmjepos/tumblr_static_trans_-_dance_dean.gif"></div>');
+  });
+
+    $(".addSnoopDancerButton").on("click", function(event){
+   
+    var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+
+    // get the maker function for the kind of dancer we're supposed to make
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    // make a dancer with a random position
+
+    var dancer = dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    dancer.$node = '<div><img src="https://media.giphy.com/media/O0Xo8Tpk5QxTW/giphy.gif"></div>';
     $('body').append(dancer.$node);
   });
 });
