@@ -42,12 +42,12 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append('<div><img src="http://static.tumblr.com/f20418d4dac3303f5653efc4a178f44a/bvidegz/m3wmjepos/tumblr_static_trans_-_dance_dean.gif"></div>');
+    $('body').append(dancer.$node);
   });
 
     $(".addSnoopDancerButton").on("click", function(event){
@@ -59,12 +59,11 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    dancer.$node = '<div><img src="https://media.giphy.com/media/O0Xo8Tpk5QxTW/giphy.gif"></div>';
     $('body').append(dancer.$node);
   });
 });

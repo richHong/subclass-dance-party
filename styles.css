@@ -21,7 +21,21 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:50px solid red;
   border-radius:10px;
-  position:absolute;
+  position: absolute;
+}
+.greenDancer{
+ border:50px solid green;
+  border-radius:10px;
+  position: absolute; 
+}
+#wbDancer{
+  height: 25px;
+}
+#snoopDancer{
+  position  : right;
+}
+.greenDancer{
+
 }
