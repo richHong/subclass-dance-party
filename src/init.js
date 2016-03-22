@@ -94,7 +94,8 @@ $(document).ready(function(){
 
  $(".jump").on("click", function(event){
 
-    $('span').animate('{height:50px}', 'slow');
+    $('img').animate({'margin-top':"-=200px"}, "slow");
+    $('img').animate({'margin-top':"+=200px"}, "slow");
 
   });
 
