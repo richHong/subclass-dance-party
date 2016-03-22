@@ -1,21 +1,27 @@
-var makeWbDancer = function(top, left, timeBetweenSteps){
+var makeWbDancer = function(top, left, timeBetweenSteps, image){
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
-  makeBlinkyDancer.apply(this, arguments);
+  makeDancer.apply(this, arguments);
 
 };
 
-  makeWbDancer.prototype = Object.create(makeBlinkyDancer.prototype);
-  makeWbDancer.prototype.constructor = makeBlinkyDancer;
+  makeWbDancer.prototype = Object.create(makeDancer.prototype);
+  makeWbDancer.prototype.constructor = makeDancer;
+
+   makeWbDancer.prototype.setPosition = function(top, left){
+    // Use css top and left properties to position our <span> tag
+    // where it belongs on the page. See http://api.jquery.com/css/
+    //
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+    this.$node.css(styleSettings);
+  };
+
 
   wbDancer.prototype.step = function(){
     // call the old version of step at the beginning of any call to this new version of step
-    makeBlinkyDancer.prototype.step.call(this);
-    // toggle() is a jQuery method to show/hide the <span> tag.
-    // See http://api.jquery.com/category/effects/ for this and
-    // other effects you can use on a jQuery-wrapped html tag.
-    
-    // when button clicked, new wb dancer appears
-    
+    makeDancer.prototype.step.call(this);
   };

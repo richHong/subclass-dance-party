@@ -1,7 +1,8 @@
-var makeSnoopDancer = function(top, left, timeBetweenSteps){
-  makeDancer.apply(this, arguments);
+var makeSnoopDancer = function(top, left, timeBetweenSteps,image){
+  
 
-  this.$node = '<span><img id="snoopDancer" src="https://media.giphy.com/media/ScZzMlETdv9mg/giphy-facebook_s.jpg"></span>';
+  // this.image = '<img src="http://files.gamebanana.com/img/ico/sprays/547b7a894bcc7.gif"></span>';
+   makeDancer.apply(this, arguments);
 
 };
 
@@ -20,8 +21,8 @@ var makeSnoopDancer = function(top, left, timeBetweenSteps){
   };
 
 
-// $('#snoopDancer').css({top:'300px'})
-[]
+
+
 
 
   snoopDancer.prototype.step = function(){
