@@ -1,5 +1,7 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.timers = [];
+  window.counter = 0;
 
   $(".addBlinkyDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
