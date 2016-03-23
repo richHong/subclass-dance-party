@@ -27,15 +27,15 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position: absolute;
 }
-#wbDancer {
-  height: 200px;
-}
-#snoopDancer{
-  height: 300px;
-}
 .nonDot{
   position: absolute;
 }
 .linedUp{
   left: 50% !important;
+}
+#wbDancer {
+  height: 200px;
+}
+#snoopDancer{
+  height: 300px;
 }
